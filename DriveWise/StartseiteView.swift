@@ -26,7 +26,7 @@ struct StartseiteView: View {
                         .font(.largeTitle).bold()
                         .foregroundColor(.green)
                     
-                    Text("Verfolge deine Fahrten und bekomme Feedback, wie sicher du fährst.")
+                    Text("Verfolge deine Fahrten und bekomme Feedback, wie sicher du fährst. Test :)")
                         .font(.headline)
                         .foregroundColor(.gray)
                         .multilineTextAlignment(.center)
