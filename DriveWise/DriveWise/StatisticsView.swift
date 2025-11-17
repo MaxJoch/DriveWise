@@ -10,7 +10,7 @@ struct StatisticsView: View {
                     Text("Statistiken")
                         .font(.largeTitle)
                         .foregroundColor(.textPrimary)
-                        .padding(.top)
+                        .bold()
 
                     // week/month picker
                     HStack {
@@ -18,8 +18,12 @@ struct StatisticsView: View {
                             .padding(8)
                             .background(Color.cardSecondary)
                             .cornerRadius(12)
+                            .font(.headline)
+                            .foregroundColor(.white.opacity(0.9))
                         Text("Monat")
                             .foregroundColor(.textSecondary)
+                            .font(.headline)
+                            .foregroundColor(.white.opacity(0.9))
                         Spacer()
                     }
                     .padding(.horizontal)
@@ -73,7 +77,6 @@ struct StatisticsView: View {
                 }
             }
         }
-        .navigationTitle("Statistiken")
     }
 }
 

@@ -39,7 +39,6 @@ struct ContentView: View {
                 StartseiteView()
             }
             .tabItem {
-                // use original center_icon asset if present (no resizing)
                 if UIImage(named: "center_icon") != nil {
                     VStack(spacing: 4) {
                         Image("center_icon")

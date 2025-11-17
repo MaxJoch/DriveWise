@@ -14,11 +14,15 @@ struct FahrtenListView: View {
             Color.bgFigma.ignoresSafeArea()
 
             ScrollView {
-                VStack(spacing: 12) {
-                    Text("Alle Fahrten")
-                        .font(.title)
-                        .foregroundColor(.white)
-                        .padding(.top)
+                VStack(spacing: 20) {
+                    // title
+                    VStack(spacing: 2) {
+                        Text("Alle Fahrten")
+                            .font(.largeTitle)
+                            .foregroundColor(.textPrimary)
+                            .bold()
+                    }
+                    .padding(.top)
 
                     ForEach(groupedDrives()) { section in
                         VStack(alignment: .leading, spacing: 8) {

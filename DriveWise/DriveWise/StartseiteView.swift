@@ -44,8 +44,8 @@ struct StartseiteView: View {
                     // Score card
                     VStack(alignment: .leading, spacing: 10) {
                         Text("Mein DriveWise Score")
-                            .font(.caption)
-                            .foregroundColor(.textSecondary)
+                            .font(.headline)
+                            .foregroundColor(.white.opacity(0.9))
 
                         ZStack {
                             RoundedRectangle(cornerRadius: 16)
@@ -110,8 +110,8 @@ struct StartseiteView: View {
                     // selectable bottom card color
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Status")
-                            .font(.subheadline)
-                            .foregroundColor(.textSecondary)
+                            .font(.headline)
+                            .foregroundColor(.white.opacity(0.9))
 
                         Picker("Karte Farbe", selection: $selectedCard) {
                             Text("Grün") .tag(CardColor.green)

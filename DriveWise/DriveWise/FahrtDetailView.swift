@@ -8,7 +8,15 @@ struct FahrtDetailView: View {
             Color.bgFigma.ignoresSafeArea()
 
             ScrollView {
-                VStack(spacing: 16) {
+                VStack(spacing: 20) {
+                    // title
+                    VStack(spacing: 2) {
+                        Text("Fahrtdetails")
+                            .font(.largeTitle)
+                            .foregroundColor(.textPrimary)
+                            .bold()
+                    }
+                    .padding(.top)
                     // header card with start / goal
                     VStack(alignment: .leading, spacing: 8) {
                         Text(dateHeader(drive.startDate))
@@ -95,7 +103,6 @@ struct FahrtDetailView: View {
                 .padding(.top)
             }
         }
-        .navigationTitle("Fahrtdetails")
     }
 
     private func metricRow(icon: String, title: String, value: String) -> some View {

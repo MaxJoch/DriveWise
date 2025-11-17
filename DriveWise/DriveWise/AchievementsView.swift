@@ -7,6 +7,16 @@ struct AchievementsView: View {
 
             ScrollView {
                 VStack(spacing: 16) {
+                    VStack(spacing: 20) {
+                        // title
+                        VStack(spacing: 2) {
+                            Text("Erfolge")
+                                .font(Font.largeTitle)
+                                .foregroundColor(.textPrimary)
+                                .bold()
+                        }
+                        .padding(.top)
+                    }
                     VStack(spacing: 8) {
                         Text("Level")
                             .font(.title)
@@ -61,7 +71,6 @@ struct AchievementsView: View {
                 .padding(.top)
             }
         }
-        .navigationTitle("Erfolge")
     }
 }
 
