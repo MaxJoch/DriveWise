@@ -2,12 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-<<<<<<< HEAD
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>remote-notification</string>
-	</array>
-=======
 	<key>UILaunchStoryboardName</key>
 	<string>Launch Screen</string>
 	<key>UIBackgroundModes</key>
@@ -21,6 +15,5 @@
 	<string>Wir verwenden deinen Standort, um Start und Ziel deiner Fahrt zu bestimmen.</string>
 	<key>NSSupportsLiveActivities</key>
 	<true/>
->>>>>>> 8b0cfe3 (DriveWise)
 </dict>
 </plist>

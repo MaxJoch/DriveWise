@@ -250,4 +250,4 @@ Betreuer: **Prof. Dr. Roland Schätzle**
 
 Dieses Projekt wurde im Rahmen einer Studienarbeit erstellt und ist in erster Linie
 zu Demonstrations- und Lernzwecken gedacht.
->>>>>>> f43926b4f236178e81de6fade8c0f3d9fe95c16c
+

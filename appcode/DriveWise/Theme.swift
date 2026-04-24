@@ -1,6 +1,4 @@
 import SwiftUI
-<<<<<<< HEAD
-=======
 import UIKit
 
 enum AppLayout {
@@ -8,7 +6,6 @@ enum AppLayout {
     static let horizontalPadding: CGFloat = 16
     static let listRowVerticalPadding: CGFloat = 8
 }
->>>>>>> 8b0cfe3 (DriveWise)
 
 extension Color {
     // helper to create Color from hex
@@ -36,22 +33,6 @@ extension Color {
         )
     }
 
-<<<<<<< HEAD
-    static let bgFigma = Color(hex: "15334C") // background for each view
-    static let accentFigma = Color(hex: "498AFB") // button highlight
-    static let cardSecondary = Color(red: 59/255, green: 94/255, blue: 158/255) // R:59 G:94 B:158
-    static let textPrimary = Color(hex: "FFFFFF")
-    static let textSecondary = Color(hex: "D6D3D3")
-}
-
-struct CardStyle: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .padding()
-            .background(Color.cardSecondary)
-            .cornerRadius(16)
-            .shadow(color: Color.black.opacity(0.2), radius: 6, x: 0, y: 3)
-=======
     // App-wide semantic colors with automatic light/dark adaptation.
     static let bgFigma = Color(UIColor { trait in
         trait.userInterfaceStyle == .dark
@@ -134,18 +115,13 @@ struct AppPrimaryButtonStyle: ViewModifier {
             .padding(.vertical, 14)
             .background(Color.accentFigma)
             .cornerRadius(12)
->>>>>>> 8b0cfe3 (DriveWise)
     }
 }
 
 extension View {
-<<<<<<< HEAD
-    func cardStyle() -> some View { modifier(CardStyle()) }
-=======
     func appPageTitleStyle() -> some View { modifier(AppPageTitleStyle()) }
     func appSectionCardStyle(cornerRadius: CGFloat = 12) -> some View {
         modifier(AppSectionCardStyle(cornerRadius: cornerRadius))
     }
     func appPrimaryButtonStyle() -> some View { modifier(AppPrimaryButtonStyle()) }
->>>>>>> 8b0cfe3 (DriveWise)
 }
