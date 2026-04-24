@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="true" userDefinedModelVersionIdentifier="">
+<<<<<<< HEAD
+    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <elements>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
+=======
+    <!-- DriveEntity: Hauptentität für Fahrten -->
+    <entity name="DriveEntity" representedClassName="DriveEntity" syncable="YES">
+        <attribute name="avgSpeedKmh" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="distanceKm" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="endDate" attributeType="Date" defaultDateTimeInterval="0" usesScalarValueType="NO"/>
+        <attribute name="endLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="endLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="errorCount" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="from" attributeType="String" defaultValueString=""/>
+        <attribute name="fromCity" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="maxSpeedKmh" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="maxAccelMS2" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="maxBrakeMS2" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="maxLateralAccelMS2" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="hardBrakeCount" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="hardAccelCount" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sharpTurnCount" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="veryHardBrakeCount" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="veryHardAccelCount" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="verySharpTurnCount" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="speedingKm" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="score" optional="YES" attributeType="Integer 16" defaultValueString="100" usesScalarValueType="YES"/>
+        <attribute name="startDate" attributeType="Date" defaultDateTimeInterval="0" usesScalarValueType="NO"/>
+        <attribute name="startLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="startLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="to" attributeType="String" defaultValueString=""/>
+        <attribute name="toCity" optional="YES" attributeType="String"/>
+        <relationship name="errorEvents" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ErrorEventEntity" inverseName="drive" inverseEntity="ErrorEventEntity"/>
+    </entity>
+    
+    <!-- ErrorEventEntity: Einzelne Fehler-Events während einer Fahrt -->
+    <entity name="ErrorEventEntity" representedClassName="ErrorEventEntity" syncable="YES">
+        <attribute name="accelerationG" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="severity" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="speedKmh" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" defaultDateTimeInterval="0" usesScalarValueType="NO"/>
+        <attribute name="type" attributeType="String" defaultValueString=""/>
+        <relationship name="drive" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DriveEntity" inverseName="errorEvents" inverseEntity="DriveEntity"/>
+    </entity>
+    
+    <elements>
+        <element name="DriveEntity" positionX="-63" positionY="-18" width="128" height="299"/>
+        <element name="ErrorEventEntity" positionX="144" positionY="-9" width="128" height="164"/>
+>>>>>>> 8b0cfe3 (DriveWise)
+    </elements>
+</model>
